@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madrasah Al-Qur'an Digital (MAD) | Belajar Al-Qur'an Lebih Mudah dan Terarah</title>
+  <meta name="description" content="Lembaga pembelajaran Al-Qur'an digital bersanad di madrasahalquran.id. Bimbingan tahsin, tajwid teori dan praktik, bahasa Arab Al-Qur'an, serta seni khat mushaf.">
+  <meta name="keywords" content="Madrasah Al-Qur'an Digital, belajar Al-Qur'an online, tahsin bersanad, tajwid jazariyyah, halaqah talaqqi, bahasa arab quran">
+  <meta name="author" content="Madrasah Al-Qur'an Digital">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Madrasah Al-Qur'an Digital (MAD) | Belajar Al-Qur'an Lebih Mudah dan Terarah">
+  <meta property="og:description" content="Lembaga pembelajaran Al-Qur'an digital dengan kurikulum berjenjang dan asatidz bersanad talaqqi resmi.">
+  <meta property="og:url" content="https://madrasahalquran.id">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23762D31'/><path d='M8 22V10l8 4 8-4v12l-8 4z' fill='none' stroke='%23C8A77C' stroke-width='2'/></svg>">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-wrap">
+      <!-- Logo MAD -->
+      <a href="#beranda" class="brand-link" aria-label="Madrasah Al-Qur'an Digital: Kembali ke Beranda">
+        <div class="brand-logo-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-title">MAD</span>
+          <span class="brand-domain">madrasahalquran.id</span>
+        </div>
+      </a>
+
+      <!-- Menu Navigasi Desktop -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <ul class="nav-links">
+          <li><a href="#beranda" class="nav-link">Beranda</a></li>
+          <li><a href="#program-mad" class="nav-link">Program MAD</a></li>
+          <li><a href="#kelas-terbuka" class="nav-link">Kelas Terbuka</a></li>
+          <li><a href="#perpustakaan" class="nav-link">E-Book</a></li>
+          <li><a href="#artikel-faedah" class="nav-link">Artikel &amp; Faedah</a></li>
+          <li><a href="#tentang-mad" class="nav-link">Tentang Kami</a></li>
+        </ul>
+      </nav>
+
+      <!-- Aksi Navigasi: Toggle Tema, CTA Daftar, dan Tombol Menu Mobile -->
+      <div class="nav-actions">
+        <!-- Toggle Light / Dark Mode -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Beralih tema tampilan">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Daftar Kelas -->
+        <a href="#kelas-terbuka" class="btn btn-primary btn-sm nav-cta-desktop">
+          Daftar Kelas
+        </a>
+
+        <!-- Tombol Menu Mobile -->
+        <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu & Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Menu navigasi perangkat seluler" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <span class="brand-title">MAD</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Tutup menu navigasi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="drawer-links">
+      <li><a href="#beranda" class="drawer-link">Beranda</a></li>
+      <li><a href="#program-mad" class="drawer-link">Program MAD</a></li>
+      <li><a href="#mengapa-mad" class="drawer-link">Mengapa MAD</a></li>
+      <li><a href="#kelas-terbuka" class="drawer-link">Kelas yang Dibuka</a></li>
+      <li><a href="#cara-belajar" class="drawer-link">Cara Belajar</a></li>
+      <li><a href="#perpustakaan" class="drawer-link">Perpustakaan E-Book</a></li>
+      <li><a href="#artikel-faedah" class="drawer-link">Artikel &amp; Faedah</a></li>
+      <li><a href="#tentang-mad" class="drawer-link">Tentang Kami</a></li>
+      <li><a href="#faq" class="drawer-link">Pertanyaan Umum (FAQ)</a></li>
+    </ul>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+      <a href="#kelas-terbuka" class="btn btn-primary" style="width: 100%;">Lihat Kelas Terbuka</a>
+      <button type="button" class="btn btn-secondary trigger-consultation-modal" style="width: 100%;">Konsultasi Kelas</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+            <span>Pendaftaran Halaqah Periode Baru Telah Dibuka</span>
+          </div>
+
+          <h1 class="hero-title">
+            Belajar Al-Qur'an, <span class="highlight">Lebih Mudah</span> dan Terarah.
+          </h1>
+
+          <p class="hero-description">
+            Madrasah Al-Qur'an Digital (MAD) menghadirkan bimbingan tilawah, tajwid bersanad, bahasa Arab, dan kaligrafi mushaf secara terstruktur dengan ruang halaqah daring intensif bersama para asatidz berpengalaman.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#program-mad" class="btn btn-primary">
+              Jelajahi Program
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <button type="button" class="btn btn-secondary trigger-consultation-modal">
+              Konsultasi Kelas
+            </button>
+          </div>
+
+          <div class="hero-notice-list">
+            <div class="hero-notice-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Talaqqi Interaktif Zoom</span>
+            </div>
+            <div class="hero-notice-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Kurikulum Bertingkat</span>
+            </div>
+            <div class="hero-notice-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Pengajar Bersanad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Hero: Karakter Warm Minimalist Premium -->
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <svg class="hero-visual-ornament" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+              <polygon points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" />
+            </svg>
+
+            <div class="hero-quran-arch">
+              <div class="arabic-bismillah" dir="rtl" lang="ar">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+              </div>
+              <div class="arabic-ayah" dir="rtl" lang="ar">
+                وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+              </div>
+              <p class="ayah-meaning">
+                "Dan bacalah Al-Qur'an itu dengan perlahan-lahan (tartil)."
+              </p>
+              <span style="font-size: 0.75rem; color: var(--color-gold); font-weight: 600;">(QS. Al-Muzzammil: 4)</span>
+            </div>
+
+            <div class="hero-halaqah-chip">
+              <div class="chip-avatar-group">
+                <div class="chip-symbol">MAD</div>
+                <div class="chip-text">Halaqah Talaqqi Daring</div>
+              </div>
+              <span class="chip-status">Bimbingan Terbimbing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROGRAM MAD: MAU BELAJAR APA? -->
+    <section class="section" id="program-mad" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Pilihan Cabang Ilmu</span>
+          <h2 class="section-title">Program MAD: Mau Belajar Apa?</h2>
+          <p class="section-description">
+            Pilihlah disiplin keilmuan Al-Qur'an yang ingin Anda tekuni. Setiap program dirancang dengan kurikulum rapi dan panduan bertahap dari dasar hingga mahir.
+          </p>
+        </header>
+
+        <div class="programs-grid" id="programs-container">
+          <!-- Diisi secara dinamis melalui data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MENGAPA BELAJAR DI MAD? -->
+    <section class="section" id="mengapa-mad">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Komitmen Kualitas</span>
+          <h2 class="section-title">Mengapa Belajar di MAD?</h2>
+          <p class="section-description">
+            Kami menjaga adab thalabul ilmi dengan memanfaatkan teknologi modern untuk mempermudah santri tanpa mengurangi kesungguhan talaqqi bersama guru.
+          </p>
+        </header>
+
+        <div class="keunggulan-grid">
+          <article class="keunggulan-card">
+            <span class="keunggulan-card-number">01</span>
+            <div class="keunggulan-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <h3 class="keunggulan-title">Pembelajaran Online Terjadwal</h3>
+            <p class="keunggulan-desc">
+              Pertemuan tatap layar interaktif berkapasitas nyaman via Zoom, didukung rekaman kajian lengkap dan ruang interaksi halaqah.
+            </p>
+          </article>
+
+          <article class="keunggulan-card">
+            <span class="keunggulan-card-number">02</span>
+            <div class="keunggulan-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="keunggulan-title">Materi Terstruktur &amp; Rapi</h3>
+            <p class="keunggulan-desc">
+              Kurikulum bertahap mulai dari pengenalan artikulasi huruf dasar hingga matan lanjutan dengan modul panduan dan catatan koreksi.
+            </p>
+          </article>
+
+          <article class="keunggulan-card">
+            <span class="keunggulan-card-number">03</span>
+            <div class="keunggulan-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <h3 class="keunggulan-title">Bimbingan Pengajar Bersanad</h3>
+            <p class="keunggulan-desc">
+              Diasuh langsung oleh para asatidz dan hafizhah yang mengantongi silsilah sanad tilawah muttashil serta berpengalaman membimbing secara telaten.
+            </p>
+          </article>
+
+          <article class="keunggulan-card">
+            <span class="keunggulan-card-number">04</span>
+            <div class="keunggulan-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="keunggulan-title">Program Berjenjang Berkelanjutan</h3>
+            <p class="keunggulan-desc">
+              Evaluasi berkala di setiap akhir tingkatan dengan sertifikat resmi, laporan perkembangan tilawah, dan arah lanjutan yang jelas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KELAS YANG SEDANG DIBUKA -->
+    <section class="section" id="kelas-terbuka" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Jadwal &amp; Pendaftaran</span>
+          <h2 class="section-title">Kelas yang Sedang Dibuka</h2>
+          <p class="section-description">
+            Pilih kelas aktif sesuai minat dan jadwal Anda. Setiap kartu menampilkan program induk, angkatan halaqah, metode belajar, dan status kuota.
+          </p>
+        </header>
+
+        <!-- Filter Tab Kategori Kelas -->
+        <div class="classes-filter-bar" role="tablist" aria-label="Filter kategori kelas">
+          <button type="button" class="filter-chip-btn is-active" data-filter="all" role="tab" aria-selected="true">Semua Kelas</button>
+          <button type="button" class="filter-chip-btn" data-filter="tajwid-teori" role="tab" aria-selected="false">Tajwid Teori</button>
+          <button type="button" class="filter-chip-btn" data-filter="tahsin-quran" role="tab" aria-selected="false">Tahsin Tilawah</button>
+          <button type="button" class="filter-chip-btn" data-filter="tajwid-praktik" role="tab" aria-selected="false">Tajwid Praktik</button>
+          <button type="button" class="filter-chip-btn" data-filter="bahasa-arab" role="tab" aria-selected="false">Bahasa Arab</button>
+          <button type="button" class="filter-chip-btn" data-filter="khat-kaligrafi" role="tab" aria-selected="false">Khat &amp; Kaligrafi</button>
+        </div>
+
+        <div class="classes-grid" id="classes-container">
+          <!-- Diisi secara dinamis melalui data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CARA MULAI BELAJAR -->
+    <section class="section" id="cara-belajar">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Alur Pendaftaran Mudah</span>
+          <h2 class="section-title">Cara Mulai Belajar di MAD</h2>
+          <p class="section-description">
+            Tiga tahapan ringkas untuk memulai perjalanan menuntut ilmu Al-Qur'an bersama asatidz pembimbing kami.
+          </p>
+        </header>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number-badge">1</div>
+            <h3 class="step-title">Pilih Kelas yang Sesuai</h3>
+            <p class="step-desc">
+              Tentukan cabang ilmu dan jadwal yang cocok. Jika Anda masih ragu menentukan tingkatan bacaan, silakan hubungi tim kami untuk tes penempatan gratis.
+            </p>
+            <div class="step-note-box">
+              Tersedia pilihan halaqah akhir pekan maupun kelas malam hari setelah jam kerja.
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number-badge">2</div>
+            <h3 class="step-title">Daftar Online &amp; Konfirmasi</h3>
+            <p class="step-desc">
+              Lakukan pendaftaran secara mandiri dan dapatkan instruksi konfirmasi langsung melalui admin halaqah via pesan WhatsApp resmi MAD.
+            </p>
+            <div class="step-note-box">
+              Verifikasi cepat dengan panduan tata tertib dan tautan grup pengumuman santri.
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number-badge">3</div>
+            <h3 class="step-title">Mulai Belajar &amp; Talaqqi</h3>
+            <p class="step-desc">
+              Ikuti pertemuan tatap layar, simak penjelasan materi, dan setorkan bacaan Anda secara bergiliran untuk disimak dan dikoreksi langsung oleh guru.
+            </p>
+            <div class="step-note-box">
+              Rekaman kelas dan modul PDF dapat diunduh untuk pengulangan mandiri di rumah.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PERPUSTAKAAN DIGITAL MAD -->
+    <section class="section" id="perpustakaan" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Khazanah Ilmu Terbuka</span>
+          <h2 class="section-title">Perpustakaan Digital MAD</h2>
+          <p class="section-description">
+            Kumpulan e-book panduan tahsin, terjemah matan tajwid bersanad, dan kosa kata Al-Qur'an pilihan yang dapat diakses oleh para pencari ilmu.
+          </p>
+        </header>
+
+        <div class="ebooks-grid" id="ebooks-container">
+          <!-- Diisi secara dinamis melalui data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ARTIKEL & FAEDAH -->
+    <section class="section" id="artikel-faedah">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Kajian &amp; Wawasan</span>
+          <h2 class="section-title">Artikel &amp; Faedah Tilawah</h2>
+          <p class="section-description">
+            Tulisan ringkas seputar kaidah qira'at, adab pembawa mushaf, dan motivasi istiqamah berinteraksi dengan firman Allah Ta'ala.
+          </p>
+        </header>
+
+        <div class="articles-grid" id="articles-container">
+          <!-- Diisi secara dinamis melalui data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. MENGENAL MAD -->
+    <section class="section" id="tentang-mad" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="about-box">
+          <div class="about-grid">
+            <div>
+              <div class="about-quote-mark" aria-hidden="true">&#10077;</div>
+              <span class="section-label">Profil Lembaga</span>
+              <h2 class="about-title">Menghidupkan Tradisi Talaqqi Bersanad di Ruang Digital</h2>
+              <div class="about-paragraphs">
+                <p>
+                  Madrasah Al-Qur'an Digital (MAD) lahir dari kesadaran bahwa kemudahan teknologi semestinya mendekatkan umat pada sumber bacaan Al-Qur'an yang sahih, tartil, dan muttashil sanadnya kepada Rasulullah shallallahu 'alaihi wa sallam.
+                </p>
+                <p>
+                  Kami berkhidmat membimbing santri dari berbagai latar belakang, mulai dari mereka yang baru memulai langkah terbata-bata hingga penuntut ilmu yang mendalami matan-matan tajwid lanjutan, dengan kurikulum bertahap dan pendampingan yang penuh kesabaran.
+                </p>
+              </div>
+              <button type="button" class="btn btn-secondary trigger-consultation-modal">
+                Hubungi Pengurus Madrasah
+              </button>
+            </div>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <h4 class="pillar-name">Adab Sebelum Ilmu</h4>
+                <p class="pillar-text">Menanamkan ketulusan niat, adab berinteraksi dengan mushaf, dan rasa hormat kepada para guru qira'at.</p>
+              </div>
+              <div class="pillar-item">
+                <h4 class="pillar-name">Sanad yang Bersambung</h4>
+                <p class="pillar-text">Materi kaidah tajwid diajarkan bersandar pada rujukan muktabar para ulama qurra' yang terverifikasi.</p>
+              </div>
+              <div class="pillar-item">
+                <h4 class="pillar-name">Bimbingan Telaten</h4>
+                <p class="pillar-text">Kapasitas halaqah dibatasi agar setiap santri memperoleh waktu simak dan koreksi bacaan secara adil.</p>
+              </div>
+              <div class="pillar-item">
+                <h4 class="pillar-name">Kemudahan Akses</h4>
+                <p class="pillar-text">Dapat diikuti dari mana saja dengan sistem absensi, arsip rekaman, dan lembar evaluasi kemajuan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section class="section" id="faq">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Jawaban Pertanyaan Anda</span>
+          <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+          <p class="section-description">
+            Informasi praktis seputar persyaratan kelas, sistem pembelajaran halaqah, penerbitan sertifikat, dan bimbingan tes penempatan.
+          </p>
+        </header>
+
+        <div class="faq-wrap" id="faq-container">
+          <!-- Diisi secara dinamis melalui data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CTA PENUTUP -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-card">
+          <span class="cta-tagline-badge">Langkah Awal Memperbaiki Tilawah</span>
+          <h2 class="final-cta-title">Mulailah Membaca Al-Qur'an dengan Lebih Benar dan Percaya Diri</h2>
+          <p class="final-cta-description">
+            Jangan biarkan keraguan menahan Anda. Bergabunglah bersama ratusan santri lainnya dalam halaqah bimbingan yang terarah, hangat, dan bersanad resmi.
+          </p>
+          <div class="final-cta-buttons">
+            <a href="#kelas-terbuka" class="btn btn-gold">
+              Daftar Kelas Sekarang
+            </a>
+            <button type="button" class="btn btn-outline-white trigger-consultation-modal">
+              Konsultasi via WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Kolom Profil -->
+        <div class="footer-brand-col">
+          <a href="#beranda" class="brand-link" aria-label="Madrasah Al-Qur'an Digital">
+            <div class="brand-logo-mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-title">MAD</span>
+              <span class="brand-domain">madrasahalquran.id</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Madrasah Al-Qur'an Digital berdedikasi menyediakan wadah pendidikan tilawah, tajwid bersanad, bahasa Arab, dan seni kaligrafi mushaf secara daring dan terstruktur.
+          </p>
+        </div>
+
+        <!-- Kolom Navigasi -->
+        <div>
+          <h3 class="footer-heading">Navigasi Utama</h3>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#beranda">Beranda</a></li>
+            <li class="footer-link-item"><a href="#program-mad">Program Pendidikan</a></li>
+            <li class="footer-link-item"><a href="#kelas-terbuka">Pilihan Kelas Terbuka</a></li>
+            <li class="footer-link-item"><a href="#perpustakaan">Perpustakaan E-Book</a></li>
+            <li class="footer-link-item"><a href="#artikel-faedah">Artikel &amp; Faedah</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom Cabang Program -->
+        <div>
+          <h3 class="footer-heading">Bidang Studi</h3>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#kelas-terbuka">Tajwid Teori Bersanad</a></li>
+            <li class="footer-link-item"><a href="#kelas-terbuka">Tajwid Praktik Makharij</a></li>
+            <li class="footer-link-item"><a href="#kelas-terbuka">Tahsin Tilawah Al-Qur'an</a></li>
+            <li class="footer-link-item"><a href="#kelas-terbuka">Bahasa Arab Pemahaman</a></li>
+            <li class="footer-link-item"><a href="#kelas-terbuka">Khat &amp; Seni Kaligrafi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom Kontak & Layanan -->
+        <div>
+          <h3 class="footer-heading">Layanan Santri</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>WhatsApp: +62 812-3456-7890</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email: salam@madrasahalquran.id</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Jam Layanan: Senin - Sabtu, 08.00 - 17.00 WIB</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 Madrasah Al-Qur'an Digital (MAD). Hak Cipta Dilindungi Undang-Undang.
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <span>Domain Resmi: madrasahalquran.id</span>
+          <span>&bull;</span>
+          <a href="#beranda" style="color: var(--color-gold);">Kembali ke Atas</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bilah Aksi Cepat Bawah untuk Mobile -->
+  <aside class="mobile-bottom-bar" aria-label="Aksi Cepat Mobile">
+    <div class="mobile-bottom-bar-inner">
+      <button type="button" class="btn btn-secondary btn-sm mobile-bottom-btn trigger-consultation-modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Konsultasi</span>
+      </button>
+      <a href="#kelas-terbuka" class="btn btn-primary btn-sm mobile-bottom-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>Pilih Kelas</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================
+       MODAL DIALOGS (AKSESIBEL DENGAN ELEMEN <dialog>)
+       ========================================================== -->
+
+  <!-- Modal Detail Kelas -->
+  <dialog class="modal-dialog" id="class-detail-modal" aria-labelledby="modal-class-title">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-class-title">Detail Informasi Kelas</h3>
+      <button type="button" class="modal-close-btn" aria-label="Tutup jendela informasi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-class-body">
+      <!-- Diisi dinamis via app.js -->
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn btn-primary" id="modal-class-cta" target="_blank" rel="noopener noreferrer">
+        Lanjut Daftar via WhatsApp
+      </a>
+    </div>
+  </dialog>
+
+  <!-- Modal Konsultasi Kelas -->
+  <dialog class="modal-dialog" id="consultation-modal" aria-labelledby="modal-consultation-title">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-consultation-title">Konsultasi Penempatan &amp; Pendaftaran</h3>
+      <button type="button" class="modal-close-btn" aria-label="Tutup jendela konsultasi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <form id="consultation-form">
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          Silakan isi formulir ringkas berikut untuk terhubung langsung dengan tim kurikulum MAD guna penentuan kelas atau bimbingan tes bacaan:
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="consultation-name" style="font-size: 0.85rem; font-weight: 600;">Nama Lengkap</label>
+          <input type="text" id="consultation-name" required placeholder="Contoh: Muhammad Ihsan" style="padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-card); background-color: var(--bg-card); color: var(--text-main); font-family: inherit;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="consultation-phone" style="font-size: 0.85rem; font-weight: 600;">Nomor WhatsApp</label>
+          <input type="tel" id="consultation-phone" required placeholder="Contoh: 08123456789" style="padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-card); background-color: var(--bg-card); color: var(--text-main); font-family: inherit;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="consultation-topic" style="font-size: 0.85rem; font-weight: 600;">Topik yang Dikonsultasikan</label>
+          <select id="consultation-topic" style="padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-card); background-color: var(--bg-card); color: var(--text-main); font-family: inherit;">
+            <option value="Tes Penempatan Bacaan Tahsin">Tes Penempatan Bacaan Tahsin (Gratis)</option>
+            <option value="Informasi Dauroh Tajwid Bersanad">Informasi Dauroh Tajwid Bersanad</option>
+            <option value="Halaqah Bahasa Arab Al-Qur'an">Halaqah Bahasa Arab Al-Qur'an</option>
+            <option value="Kelas Khat &amp; Kaligrafi Mushaf">Kelas Khat &amp; Kaligrafi Mushaf</option>
+            <option value="Pertanyaan Seputar Sertifikat dan Ijazah">Pertanyaan Seputar Sertifikat dan Ijazah</option>
+          </select>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="consultation-note" style="font-size: 0.85rem; font-weight: 600;">Pertanyaan / Kendala Bacaan (Opsional)</label>
+          <textarea id="consultation-note" rows="3" placeholder="Ceritakan riwayat belajar atau jadwal luang Anda..." style="padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-card); background-color: var(--bg-card); color: var(--text-main); font-family: inherit; resize: vertical;"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim ke WhatsApp Konsultasi</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Modal Pratinjau E-Book -->
+  <dialog class="modal-dialog" id="ebook-preview-modal" aria-labelledby="modal-ebook-title">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-ebook-title">Pratinjau E-Book</h3>
+      <button type="button" class="modal-close-btn" aria-label="Tutup jendela e-book">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-ebook-body">
+      <!-- Diisi dinamis via app.js -->
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" id="modal-ebook-download">Unduh Pratinjau PDF</button>
+    </div>
+  </dialog>
+
+  <!-- Modal Baca Artikel Faedah -->
+  <dialog class="modal-dialog" id="article-modal" aria-labelledby="modal-article-title">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-article-title">Faedah Tilawah</h3>
+      <button type="button" class="modal-close-btn" aria-label="Tutup jendela artikel">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-article-body">
+      <!-- Diisi dinamis via app.js -->
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary modal-close-btn-footer" onclick="document.getElementById('article-modal').close()">Tutup</button>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
